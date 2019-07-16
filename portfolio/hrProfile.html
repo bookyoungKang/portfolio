@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/jquery-ui.css">
+   <link rel="stylesheet" href="css/my.css">
+   <link rel="stylesheet" href="css/helloworld.css">
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+   <script src="js/jquery-1.12.4.js"></script>
+   <script src="js/jquery-ui.js"></script>
+   <!-- <link rel="stylesheet" type="text/css" href="css/theme/jquery-ui.min.css" />
+   <link rel="stylesheet" type="text/css" href="css/theme/jquery-ui-1.12.icon-font.min.css" /> -->
+
+
+
+
+   <style>
+     
+      body, html {
+         /* background-image: linear-gradient(to bottom, #84A9D4,#8F91B9); */
+         background-color: #f7e8e8;
+         background-repeat: no-repeat;
+         padding: 30px;
+         font-family: "Helvetica Neue","Helvetica", "Arial","sans-serif";
+      }
+      #resume {
+         margin: 10px auto; width: 780px;
+         text-align: center;
+         font-size: 2.5em;
+         /* margin-left: -3px;  센터 확인 */
+         /* border: 1px solid gold; */
+         }
+      
+      #totalSite {
+         width: 780px;
+         margin: 0px auto;
+         /* border: 2px solid black; */
+         padding: 10px;
+         /* height: 1000px; */
+      }
+      #menuBar {height: 80px;}
+      #menuBar .menu{
+         width: 156px;
+      height: 70px;
+      text-align: center;
+      padding-top: 10px;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      float: left;   
+      margin-top: 0px;
+      outline: none;
+      border: 1px solid #ccc;
+      background-color: white;
+       color: #636363; 
+      /* color:black; */
+      cursor: pointer;
+      }
+      #menuBar a {
+         text-decoration: none;
+         font-size: 13px;
+         font-weight: 700;
+         color: #636363; 
+         /* color:black; */
+         padding: 50px 0 50px 0;
+      }
+      #menuBar #menu1 {
+         border-top-left-radius: 8px;
+         border-bottom-left-radius: 8px;
+      }
+      #menuBar #menu5 {
+         border-top-right-radius: 8px;
+         border-bottom-right-radius: 8px;
+      }
+      #menuBar .menu:hover {
+         box-shadow: 3px 3px 10px gray;
+         background-color: #3b9767;
+         color: white;
+      }
+
+      #firstPage {
+         height: 830px;
+         width: auto;
+         /* border: 1px solid blue; */
+         /* background-image: linear-gradient(to bottom,#ccc, #eee); */
+         background-color: white;
+         border-radius: 8px;
+         margin-top: 10px;
+      }
+
+      #firstPage .helloWorld {border-bottom: 1px solid #ccc;}
+
+      #firstPage .picture img{
+         border-radius: 2%;
+         margin: 0 40px 10px 40px;
+         width: 300px;
+         float: left;
+      }
+
+  
+
+      #firstPage .about {
+         padding-right: 30px;
+         margin: -10px 10px 10px 10px;
+         height: 600px;
+      }
+
+      #firstPage .info{
+      width: 350px;
+      float:left;
+      }
+      #firstPage .personalInfo {
+         border-left: 4px solid #3b9767;
+         padding: 0 0 0 10px;
+         font-size: 15px;
+         font-weight: bold;
+         color: #b3b3b3;
+         background: transparent;
+         line-height: 30px;
+         width: 80%;
+         margin: 40px 0 0 50px;
+      }
+     
+      #firstPage .personalInfo b {
+         color: #636363;
+      }
+
+
+   </style>
+   <script>
+
+   
+   </script>
+</head>
+<body>
+
+   <div id="totalSite">
+      <h1 id="resume"><img src="../portfolio/pjImages/title.png"></h1>
+      <div id="menuBar"> <!--메뉴 바-->
+         <!-- <a href="#" class="menu" id="menu1">PROFILE</a>
+         <a href="#" class="menu" id="menu2">RESUME</a>
+         <a href="#" class="menu" id="menu3">WORKS</a>
+         <a href="#" class="menu" id="menu4">EDUCATION</a>
+         <a href="#" class="menu" id="menu5">CONTACK</a> -->
+         <button type="button" id="menu1" class="menu"><a href="hrProfile.html">PROFILE</a>
+         <i class="fas fa-list"></i></button>
+         <button type="button" id="menu2" class="menu"><a href="hrProject.html">PROJECT</a>
+         <i class="fas fa-briefcase"></i></button>
+         <button type="button" id="menu3" class="menu"><a href="hrResume.html">RESUME</a>
+         <i class="fas fa-id-card"></i></button>
+         <button type="button" id="menu4" class="menu"><a href="hrEducation.html">EDUCATION</a>
+         <i class="fas fa-graduation-cap"></i></button>
+         <button type="button" id="menu5" class="menu"><a href="hrContect.html">CONTACT</a>
+         <i class="fas fa-envelope-open"></i></button>
+
+      </div>
+      
+      
+      <div id="firstPage"><!--첫 페이지-->
+         
+         <div class="helloWorld" style="font-size: 4em; text-align: center;" id="hello" name="txt">
+            <h3>
+               <span id="w1">H</span>
+               <span id="w2">e</span>
+               <span id="w3">l</span>
+               <span id="w4">l</span>
+               <span id="w5">o</span>
+               <span id="w6">&nbsp&nbsp</span>
+               <span id="w7">W</spna>
+               <span id="w8">o</spna>
+               <span id="w9">r</spna>
+               <span id="w10">l</span>
+               <span id="w11">d</span>
+               <span id="w12">!</span>
+            </h3>
+         </div>
+         <!-- <textarea class="helloWorld" style="font-size: 3em;">
+               Hello World!
+         </textarea>   -->
+         <!-- <img src = "../portfolio/pjImages/github.png" class="github"> -->
+  
+         
+         <div class="about">
+            <div class="picture"><img src="../portfolio/pjImages/bookyoung.jpg"></div>
+         <p class="project">
+            <h1 style="font-size: 2em; text-align: left; color:#636363;">About Me</h1>
+            <span style="font-size: 13px;">안녕하십니까. 주니어 웹 개발자 강부경입니다. <br><br>
+               포트폴리오를 만들면서 순수 jQuery를 사용했으며, 이를 계기로 CSS3와 HTML5에 대해 더 많은 것을 배웠고, 
+               개발 환경으로는 HTML5, CSS3, jQuery, JavaScript로 이루어져 있습니다. 
+               <br>현재 가능한 언어로는 Java, 데이터베이스, JDBC, HTML5, CSS3/JavaScript, Servlet/JSP, Ajax, OPEN API 등이 있으며, 
+               앞으로 MaBatis, Spring, Python을 배울 예정입니다.<br><br>
+               JDBC 기반으로 한 MVC Model1으로 주소록 구현,<br>
+               MVC Model 2를 사용으로 게시판과 회원가입을 구현했습니다. <br>
+               &nbsp;현재 진행 중인 웹 프로젝트는 학생들을 위한 클래스 웹사이트를 구현 중이며, 
+               제가 맡은 업무는 CRUD를 기반으로 한 코드 게시판 입니다.
+            </span></p></div>
+
+         <div class="info">
+            <p class="personalInfo">
+               <b>Name : </b>"Bookyoung Kang"
+               <br>
+               <b>Date of birth : </b>"18 Oct, 1989"
+               <br><b>Telephone : </b>"010-9197-0757"
+               <br>
+               <b>Email : </b>"zlzlza@naver.com"
+               <br>
+            </p>
+         </div>
+         <div class="info">
+            <p class="personalInfo">
+               
+               <b>Address : </b>"23, Eunhaengyeongsajeong-ro 23beon-gil, Gochon-eup, Gimpo-si, Gyeonggi-do, Republic of Korea"
+               <br>
+            </p>
+         </div>
+
+         
+
+         
+      </div><!--firstPage-->
+
+   </div> <!-- totalSite-->
+
+</body>
+</html>

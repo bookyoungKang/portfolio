@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/jquery-ui.css">
+   <link rel="stylesheet" href="css/my.css">
+   <!-- <link rel="stylesheet" href="css/pj.css"> -->
+   <link rel="stylesheet" href="css/wave.css">
+   <link rel="stylesheet" href="css/wave2.css">
+   <link rel="stylesheet" href="css/wave3.css">
+   <link rel="stylesheet" href="css/wave4.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+   <script src="js/jquery-1.12.4.js"></script>
+   <script src="js/jquery-ui.js"></script>
+   <style>
+      
+   body, html {
+      /* background-image: linear-gradient(to bottom, #84A9D4,#8F91B9); */
+      background-color: #f7e8e8;
+      background-repeat: no-repeat;
+      padding: 30px;
+      font-family: "Helvetica Neue","Helvetica", "Arial","sans-serif";
+   }
+   #project {
+      margin: 45px 0 10px 0; width: 780px;
+      text-align: center;
+      font-size: 2.5em;
+      }
+   
+   #totalSite {
+      width: 780px;
+      margin: -30px auto;
+      padding: 5px 10px 1px 10px;
+   }
+   #menuBar {height: 80px;}
+   #menuBar .menu{
+      width: 156px;
+      height: 70px;
+      text-align: center;
+      padding-top: 10px;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      float: left;   
+      margin-top: 0px;
+      outline: none;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: #636363;
+      cursor: pointer;
+   }
+   #menuBar #menu1 {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+   }
+   #menuBar #menu5 {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+   }
+   #menuBar .menu:hover {
+      box-shadow: 3px 3px 10px gray;
+      background-color: #3b9767;
+      color: white;
+   }
+   #menuBar a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      color: #636363;
+      padding: 50px 0 50px 0;
+   }
+
+   /* 사용 영역*/
+   #projectPage {
+      height: 830px;
+      width: auto;
+      background-color: white;
+      border-radius: 8px;
+      margin-top: 10px;
+   }
+
+   /*스킬 바*/
+   #projectPage .works {
+      height: 55px;
+      background-color: #dedede;
+      color: white;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      font-size: 2em;
+      font-weight: bold;
+      padding: 20px 20px 0px 30px;
+   }
+
+   #github {
+      margin: 30px 50px;
+      border-radius: 5px;
+      background:white;
+      
+   }
+   #github img {
+      width: 100px;
+      height: 50px;
+      border-radius: 50%;
+   }
+   #github .pj {
+      width: 120px;
+      height: 50px;
+      margin: 0 10px 15px 5px;
+      border-radius: 5px;
+      outline: none;
+      color: #eee;
+   }
+
+   #github #btn1 {background: #84A9D4;}
+   #github #btn2 {background: #3b9767;}
+   #github #btn3 {background: #f37576;}
+   #github #btn4 {background: #eac85d;}
+
+   #github #btn1 a {text-decoration: none; color: #eee;padding: 25px;}
+   #github #btn2 a {text-decoration: none; color: #eee;padding: 25px;}
+   #github #btn3 a {text-decoration: none; color: #eee;padding: 25px;}
+   #github #btn4 a {text-decoration: none; color: #eee;padding: 25px;}
+  
+   #github #btn1:hover {box-shadow: 2px 2px 2px #84A9D4;}
+   #github #btn2:hover {box-shadow: 2px 2px 2px #3b9767;}
+   #github #btn3:hover {box-shadow: 2px 2px 2px #f37576;}
+   #github #btn4:hover {box-shadow: 2px 2px 2px #eac85d;}
+   
+
+  #projects {
+     height: 100%;
+     position: relative;
+     left: 0px;
+     top:0px;
+  }
+ 
+
+</style>
+</head>
+<body>
+   
+   <div id="totalSite">
+      <h1 id="project"><img src="../portfolio/pjImages/title.png"></h1>
+         <div id="menuBar"> <!--메뉴 바-->
+            <button type="button" id="menu1" class="menu"><a href="hrProfile.html">PROFILE</a>
+            <i class="fas fa-list"></i></button>
+            <button type="button" id="menu2" class="menu"><a href="hrProject.html">PROJECT</a>
+            <i class="fas fa-briefcase"></i>
+            <button type="button" id="menu3" class="menu"><a href="hrResume.html">RESUME</a>
+            <i class="fas fa-id-card"></i></button>
+            </button>
+            <button type="button" id="menu4" class="menu"><a href="hrEducation.html">EDUCATION</a>
+            <i class="fas fa-graduation-cap"></i>
+            </button>
+            <button type="button" id="menu5" class="menu"><a href="hrContect.html">CONTACT</a>
+            <i class="fas fa-envelope-open"></i>
+            </button>
+            
+         </div>
+      <div id="projectPage">
+
+      <div class="works">Works</div>
+         <div id="projects">
+            <div id="github">
+               <img src="../portfolio/pjImages/github.png"">
+               <button type="button"  class="pj" id="btn1"title="github 소스입니다."><a href="https://github.com/bookyoungKang/project01"target="_blank">Project01</a></button>
+               <button type="button"  class="pj" id="btn2"title="github 소스입니다."><a href="https://github.com/bookyoungKang/project02"target="_blank">Project02</a></button>
+               <button type="button"  class="pj" id="btn3"title="github 소스입니다.">Project03</button>
+               <button type="button"  class="pj" id="btn4"title="github 소스입니다.">Project04</button>
+            </div>
+            <div id="pjLink">
+               <div class="pjs" id="pj1" onclick="location.href='pj1.html';"><img src="../portfolio/pjImages/sauna.jpg"><span style="padding-left: 5px;">사우나 프로그램</span></div>
+               <div class="pjs" id="pj2" onclick="location.href='pj2.html';"><img src="../portfolio/pjImages/education.jpg"><span style="padding-left: 10px;">교육센터 운영</span></div>
+               <div class="pjs" id="pj3"><img src="../portfolio/pjImages/준비중.png"><span style="padding-left: 30px;">준비중...</span></div>
+               <div class="pjs" id="pj4"><img src="../portfolio/pjImages/준비중.png"><span style="padding-left: 30px;">준비중...</span></div>
+            </div>
+         </div><!--project-->
+      </div><!-- projectPage -->
+   </div><!--totalSite-->
+
+
+   <style></style>
+   <script>
+      function test(){
+         alert("test");
+      }
+   </script>
+</body>
+</html>

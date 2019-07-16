@@ -1,0 +1,55 @@
+
+
+#firstPage .helloWorld {
+   outline: none;
+   width: 705px;
+   height: 160px;
+   float: left;
+   /* margin-left: 40px;
+   margin-bottom: 50px; */
+   margin: 0 0 30px 40px;
+   background-color: white;
+}
+
+#firstPage .helloWorld span {
+   margin: 0;
+   padding: 0;
+   animation-name: ani;
+   animation-duration: 6s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   color: grey;
+} 
+
+#w1 {animation-delay: 0.5s;}
+#w2 {animation-delay: 1.0s;}
+#w3 {animation-delay: 1.5s;}
+#w4 {animation-delay: 2.0s;}
+#w5 {animation-delay: 2.5s;}
+#w6 {animation-delay: 3.0s;}
+#w7 {animation-delay: 3.5s;}
+#w8 {animation-delay: 4.0s;}
+#w9 {animation-delay: 4.5s;}
+#w10 {animation-delay: 5.0s;}
+#w11 {animation-delay: 5.5s;}
+#w12 {animation-delay: 6.0s;}
+
+@keyframes ani {
+   0%,100% {
+      color: black;
+      -webkit-filter-blur:(2px);
+      -ms-filter-blur:(2px);
+      text-shadow: 0 0 20px #bf9fee,
+                   0 0 40px #bf9fee,
+                   0 0 60px #bf9fee,
+                   0 0 80px #bf9fee,
+                   0 0 100px #bf9fee,
+                   0 0 120px #bf9fee;
+   }
+   5%, 95% {
+      color:#bf9fee;
+      -webkit-filter-blur:(3px);
+      -ms-filter-blur:(2px);
+      text-shadow: none;
+   }
+}

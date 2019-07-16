@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/jquery-ui.css">
+   <link rel="stylesheet" href="css/my.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+   <script src="js/jquery-1.12.4.js"></script>
+   <script src="js/jquery-ui.js"></script>
+   <style>
+   body, html {
+      /* background-image: linear-gradient(to bottom, #84A9D4,#8F91B9); */
+      background-color: #f7e8e8;
+      background-repeat: no-repeat;
+      padding: 30px;
+      font-family: "Helvetica Neue","Helvetica", "Arial","sans-serif";
+   }
+   #contect {
+      margin: 10px auto; width: 780px;
+      text-align: center;
+      font-size: 2.5em;
+      }
+   
+   #totalSite {
+      width: 780px;
+      margin: 0px auto;
+      padding: 10px;
+   }
+   #menuBar {height: 80px;}
+   #menuBar .menu{
+      width: 156px;
+      height: 70px;
+      text-align: center;
+      padding-top: 10px;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      /* font-family: "Helvetica Neue","Helvetica", "Arial","sans-serif"; */
+      float: left;   
+      margin-top: 0px;
+      outline: none;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: #636363;
+      cursor: pointer;
+   }
+   #menuBar #menu1 {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+   }
+   #menuBar #menu5 {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+   }
+   #menuBar .menu:hover {
+      box-shadow: 3px 3px 10px gray;
+      background-color: #3b9767;
+      color: white;
+   }
+   #menuBar a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      color: #636363;
+      padding: 50px 0 50px 0;
+   }
+
+   /* 사용 영역*/
+   #contectPage {
+      height: 700px;
+      width: auto;
+      background-color: white;
+      border-radius: 8px;
+      margin-top: 10px;
+   }
+
+   /*스킬 바*/
+   #contectPage .contectMe {
+      height: 55px;
+      background-color: #dedede;
+      color: white;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      font-size: 2em;
+      font-weight: bold;
+      padding: 20px 20px 0px 30px;
+   }
+
+   .mainText {
+      padding: 60px 35px;
+      float: left;
+      display: inline-block;
+   }
+   div {display: block;}
+   strong {font-weight: bold; font-size: 1.2em; color: #636363;}
+   label {font-size: 18px; line-height: 20px;}
+
+   .input-append {
+      margin-bottom: 20px;
+   }
+   .txt {
+      font-size: 20px;
+      height: 36px;
+   }
+   .send i {
+      border: 1px solid #636363;
+      border-top-right-radius: 5px; 
+      border-bottom-right-radius: 5px; 
+      font-size: 40px;
+      display: inline-block;
+      position: absolute;
+      background: #ccc;
+   }
+  
+   .Button {
+      font-size: 20px;
+      height: 45px;
+      margin: 0 -20px 0 207px;
+      border-radius: 5px;
+      border: 1px solid lightsteelblue;
+      outline: none;
+      background: lightsteelblue;
+      color: white;
+      text-decoration: none;
+   }
+   .Button a {
+      text-decoration: none;
+      color: white;
+   }
+
+   #info {
+      margin: 80px 0 0 400px;
+      width: 340px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border: 1px solid lightsteelblue;
+   }
+   .infomation {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      background: lightsteelblue;
+      height: 45px;
+      border-radius: 5px;
+      padding-top: 10px;
+   }
+   address {
+      padding: 15px 10px;
+      color: #636363;
+   }
+   address b {
+      font-size: 20px;
+   }
+
+      
+
+</style>
+</head>
+<body>
+   
+   <div id="totalSite">
+      <h1 id="contect" class="animated delay1 fadeIn"><img src="../portfolio/pjImages/title.png"></h1>
+         <div id="menuBar"> <!--메뉴 바-->
+            <button type="button" id="menu1" class="menu"><a href="hrProfile.html">PROFILE</a>
+            <i class="fas fa-list"></i></button>
+            <button type="button" id="menu2" class="menu"><a href="hrProject.html">PROJECT</a>
+            <i class="fas fa-briefcase"></i>
+            <button type="button" id="menu3" class="menu"><a href="hrResume.html">RESUME</a>
+            <i class="fas fa-id-card"></i></button>
+            </button>
+            <button type="button" id="menu4" class="menu"><a href="hrEducation.html">EDUCATION</a>
+            <i class="fas fa-graduation-cap"></i>
+            </button>
+            <button type="button" id="menu5" class="menu"><a href="hrContect.html">CONTACT</a>
+            <i class="fas fa-envelope-open"></i>
+            </button>
+            
+         </div>
+      <div id="contectPage">
+
+      <div class="contectMe">Contact me</div>
+      <div class="mainText">
+         <div class="send">
+            <form action="send_mail.php" id="contectsend">
+               <label>
+                  <strong>Name</strong>
+               </label>
+               <div class="input-append">
+                  <input type="text" name="Name" class="txt"required>
+                  <span class="add-on">
+                     <i class="fas fa-user" style=" width: 40px;text-align: center;"></i>
+                  </span>
+               </div>
+               <label>
+                  <strong>Subject</strong>
+               </label>
+               <div class="input-append">
+                  <input type="text" name="Subject"class="txt"required pattern="[가-힣]{2,5}>
+                  <span class="add-on">
+                     <!-- <i class="icon-comment"></i> -->
+                     <i class="fas fa-comment"></i>
+                  </span>
+               </div>
+               <label>
+                  <strong>Email</strong>
+               </label>
+               <div class="input-append">
+                  <input type="text" name="Mail"class="txt"required pattern="(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?">
+                  <span class="add-on">
+                     <!-- <i class="icon-mail"></i> -->
+                     <i class="fas fa-envelope-open"></i>
+                  </span>
+               </div>
+               <label>
+                  <strong>Message</strong>
+               </label>
+               <div class="input-append">
+                  <textarea name="Message" class="txt" style="width: 280px; height: 100px;
+                  margin-bottom: 15px; font-size: 13px;"></textarea>
+                  <br>
+                  <div class="text-right">
+                     <button type="submit" class="Button">
+                     <a href="mailto:zlzlza@naver.com?Subject=This%20is%20the%20subject&cc=zlzlza@naver.com&body=This%20is%20the%20body
+                     " title="메일보내기">Send It</a></button>
+                  </div>
+               </div>
+            </form>
+         </div><!--send-->
+      </div><!--mainText-->
+
+      
+      <div id="info">
+         <div class=infomation>Contact infomation</div>
+         <address>
+               <b>Address : </b>
+                  23, Eunhaengyeongsajeong-ro
+                  23beon-gil, Gochon-eup,
+                  Gimpo-si, Gyeonggi-do,
+                  Republic of Korea
+               <br>
+               <br><b>Phone : </b>010.9197.0757
+               <br><b>Email : </b>zlzlza@naver.com
+         </address>
+      </div><!--info-->
+        
+      </div><!-- contectPage-->
+   </div>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+</body>
+</html>

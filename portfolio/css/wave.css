@@ -1,0 +1,74 @@
+
+
+#pjLink {
+   position: absolute !important;
+   top: 120px !important;
+   left: 50px !important;
+   width: 700px;
+   height: 600px;
+   /* margin-left: 145px; */
+   /* margin-left: 310px; */
+   /* border: 10px solid black; */
+}
+#pjLink #pj1 {
+   color: gray;
+   font-weight: bold;
+   width: 230px;
+   height: 240px;
+   background-color: rgb(224, 234, 247);
+   float: left;
+   margin: 35px 30px 0 58px;
+   border-radius: 50%;
+   position: relative;
+   left: 0;
+   top: 0;
+}
+
+#pjLink #pj1::before,
+#pjLink #pj1::after {
+   content: " ";
+   position: absolute;
+   border: 3px solid #84A9D4;
+   -webkit-filter-blur:(2px);
+   -ms-filter-blur:(2px);
+   width: inherit;
+   height: inherit;
+   left: 0;
+   top: 0;
+   box-sizing: border-box;
+   border-radius: 50%;
+   animation: ani 1s linear infinite;
+}
+#pjLink #pj1::after {animation-delay: 0.5s;}
+
+@keyframes ani {
+   0% {opacity: 0;}
+   50% {opacity: 0.7;}
+   100% {
+      opacity: 0;
+      transform: scale(1.2);
+   }
+}
+
+
+
+
+#pjLink #pj1 span, #pjLink #pj1 img {
+   margin: 25px 0 0 25px;
+}
+
+#pjLink #pj1 img {
+   width: 190px;
+   height: 190px;
+   border-radius: 50%;
+   padding-right: 10px;
+   /* border: 1px solid red; */
+   padding-right: 0px;
+   margin-left: 20px;
+}
+#pj1:hover {box-shadow: 3px 3px 5px 1px gray; cursor: pointer;}
+
+#pjLink #pj1 span {
+   margin: 20px 0 0 66px;
+   font-size: 13px;
+}

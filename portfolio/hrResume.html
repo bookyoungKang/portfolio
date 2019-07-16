@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/jquery-ui.css">
+   <link rel="stylesheet" href="css/my.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+   
+   <script src="js/jquery-1.12.4.js"></script>
+   <script src="js/jquery-ui.js"></script>
+   <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+   <script src="js/jquery.canvasjs.min.js"></script>
+   
+   <style>
+   
+      body, html {
+         /* background-image: linear-gradient(to bottom, #84A9D4,#8F91B9); */
+         background-color: #f7e8e8;
+         background-repeat: no-repeat;
+         padding: 30px;
+         font-family: "Helvetica Neue","Helvetica", "Arial","sans-serif";
+      }
+      #resume {
+         margin: 10px auto; width: 780px;
+         text-align: center;
+         font-size: 2.5em;
+         }
+      
+      #totalSite {
+         width: 780px;
+         margin: 0px auto;
+         padding: 10px;
+      }
+      #menuBar {height: 80px;}
+      #menuBar .menu{
+         width: 156px;
+         height: 70px;
+         text-align: center;
+         padding-top: 10px;
+         padding-left: 10px;
+         font-size: 13px;
+         font-weight: 700;
+         /* font-family: "Helvetica Neue","Helvetica", "Arial","sans-serif"; */
+         float: left;   
+         margin-top: 0px;
+         outline: none;
+         border: 1px solid #ccc;
+         background-color: white;
+         color: #636363;
+         cursor: pointer;
+      }
+      #menuBar #menu1 {
+         border-top-left-radius: 8px;
+         border-bottom-left-radius: 8px;
+      }
+      #menuBar #menu5 {
+         border-top-right-radius: 8px;
+         border-bottom-right-radius: 8px;
+      }
+      #menuBar .menu:hover {
+         box-shadow: 3px 3px 10px gray;
+         background-color: #3b9767;
+         color: white;
+      }
+
+      /* 사용 영역*/
+      #resumePage {
+         height: 1050px;
+         width: auto;
+         background-color: white;
+         border-radius: 8px;
+         margin-top: 10px;
+      }
+
+      /*스킬 바*/
+      #resumePage .skills {
+         height: 55px;
+         background-color: #dedede;
+         color: white;
+         border-top-left-radius: 8px;
+         border-top-right-radius: 8px;
+         font-size: 2em;
+         font-weight: bold;
+         padding: 20px 20px 0px 30px;
+      }
+      .subPage {
+         display: block;
+         float: left;
+         width: 330px;
+         padding: 10px 10px 10px 10px;
+         margin-left: 20px;
+         /* border: 1px solid black; */
+      }
+      .bar {
+         border-radius: 4px;
+         display: inline-block;
+         background: #ccc;
+         margin-top: 5px;
+         width: 100%;
+      }
+      .bar-red {
+         background-color: #f37576;
+         box-sizing: border-box;
+         border-radius: 4px;
+         color: #fff;
+         display: inline-block;
+         padding: 4px;
+         text-align: right;
+         font-size: 13px;
+         height: 25px;
+         /* border: 1px solid black; */
+      }
+      .bar-green {
+         background-color: #3b9767;
+         box-sizing: border-box;
+         border-radius: 4px;
+         color: #fff;
+         display: inline-block;
+         padding: 4px;
+         text-align: right;
+         font-size: 13px;
+         height: 25px;
+         /* border: 1px solid black; */
+      }
+      .bar-yellow {
+         background-color: #eac85d;
+         box-sizing: border-box;
+         border-radius: 4px;
+         color: #fff;
+         display: inline-block;
+         padding: 4px;
+         text-align: right;
+         font-size: 13px;
+         height: 25px;
+         /* border: 1px solid black; */
+      }
+      .bar-blue {
+         background-color: #5d9bd6;
+         box-sizing: border-box;
+         border-radius: 4px;
+         color: #fff;
+         display: inline-block;
+         padding: 4px;
+         text-align: right;
+         font-size: 13px;
+         height: 25px;
+         /* border: 1px solid black; */
+      }
+      .bar-violet {
+         background-color: violet;
+         box-sizing: border-box;
+         border-radius: 4px;
+         color: #fff;
+         display: inline-block;
+         padding: 4px;
+         text-align: right;
+         font-size: 13px;
+         height: 25px;
+         /* border: 1px solid black; */
+      }
+      .bar .progress60 {width: 60%;}
+      .bar .progress75 {width: 75%;}
+      .bar .progress85 {width: 80%;}
+      .bar .progress65 {width: 65%;}
+      .bar .progress0 {width: 85%;}
+      strong {
+         color: #808181;
+         font-family: "Helvetica Neue","Helvetica", "Arial","sans-serif";
+         font-size: 15px;
+         font-weight: bold;
+         line-height: 1.5;
+         text-size-adjust: 100%;
+      }
+
+      #chartContainer {
+         width: 300px;
+         padding-left: 110px;
+         margin-top: 60px;
+      }
+
+      /*그래프*/
+      .canvasjs-chart-credit {
+         display: none !important;
+      }
+      .canvasjs-chart-canvas {
+         background-color: transparent;
+      }
+
+      /*경력 기술*/
+      #workExperience {
+         /* border: 1px solid black; */
+         color: #636363;
+         text-align: left;
+         font-size: 2.3em;
+         width: 400px;
+         margin: 50px 20px 10px 30px;
+      }
+
+      .workType{
+         /* border: 1px solid black; */
+         width: 200px;
+         margin-left: 30px;
+         color: #808181;
+         float: left;
+      }
+      .workType > h4 {
+         color: #3b9767;
+      }
+
+      .text {
+         width: 500px;
+         margin-left: 250px;
+         border-left: 4px solid #3b9767;
+         line-height: 31px;
+         padding-left: 10px;
+         background: url("../portfolio/pjImages/bg-arrow.png") no-repeat 0 50%;
+      }
+
+      #menuBar a {
+         text-decoration: none;
+         font-size: 13px;
+         font-weight: 700;
+         color: #636363;
+         padding: 50px 0 50px 0;
+      }
+      .workType p, .text p {
+         font-size: 11px;
+      }
+
+    
+   </style>
+   <script>
+      window.onload = function(){
+
+         var options = {
+            animationEnabled: true,
+            title: {
+               text: "Skills"
+            },
+            data: [{
+               type: "doughnut",
+               innerRadius: "40%",
+               legendText: "{label}",
+		         indexLabel: "{label}: #percent%",
+            dataPoints: [
+               { label: "jquery", y: 300 },
+               { label: "Bootstrap", y: 300 },
+               { label: "Servlet", y: 250 },
+               { label: "Ajax", y: 200 },
+               { label: "Open API", y: 150 },
+               { label: "Spring", y: 150 },
+               { label: "MaBatis", y: 150 },
+               { label: "Python", y: 150 }
+            ]
+         }]
+      };
+   $("#chartContainer").CanvasJSChart(options);
+   }
+   </script>
+</head>
+<body>
+   
+   <div id="totalSite">
+      <h1 id="resume"><img src="../portfolio/pjImages/title.png"></h1>
+         <div id="menuBar"> <!--메뉴 바-->
+            <button type="button" id="menu1" class="menu"><a href="hrProfile.html">PROFILE</a>
+            <i class="fas fa-list"></i></button>
+            <button type="button" id="menu2" class="menu"><a href="hrProject.html">PROJECT</a>
+            <i class="fas fa-briefcase"></i>
+            <button type="button" id="menu3" class="menu"><a href="hrResume.html">RESUME</a>
+            <i class="fas fa-id-card"></i></button>
+            </button>
+            <button type="button" id="menu4" class="menu"><a href="hrEducation.html">EDUCATION</a>
+            <i class="fas fa-graduation-cap"></i>
+            </button>
+            <button type="button" id="menu5" class="menu"><a href="hrContect.html">CONTACT</a>
+            <i class="fas fa-envelope-open"></i>
+            </button>
+      
+         </div>
+   <div id="resumePage">
+      <div class="skills">My Skills</div>
+      <div class="subPage">
+         <div class="span" id="percent">
+            <p>
+               <strong>Java</strong>
+               <br>
+               <span class="bar">
+                  <span class="bar-red progress60">60%</span>
+               </span>
+            </p>
+            <p>
+               <strong>Oracle</strong>
+               <br>
+               <span class="bar">
+                  <span class="bar-green progress75">75%</span>
+               </span>
+            </p>
+            <p>
+               <strong>HTML5/CSS</strong>
+               <br>
+               <span class="bar">
+                  <span class="bar-yellow progress85">80%</span>
+               </span>
+            </p>
+            <p>
+               <strong>JavaScript</strong>
+               <br>
+               <span class="bar">
+                  <span class="bar-blue progress65">65%</span>
+               </span>
+            </p>
+            <p>
+               <strong>JSP</strong>
+               <br>
+               <span class="bar">
+                  <span class="bar-violet progress0">85%</span>
+               </span>
+            </p>
+         </div><!--percent-->
+      </div><!--subPage-->
+
+      <div id="chartContainer" style="height: 300px;"></div><!--graph-->
+    
+      <div id="workExperience">Work Experience</div>
+      
+      <div class="work">
+         <div class="workType">
+            <h4>DBS 크루즈훼리</h4>
+            <p>
+               승무원
+               <br>
+               2016.06 ~ 2017.11
+            </p>
+         </div>
+         <div class="text">
+            <p style="font-size: 12px;">
+               1년 6개월동안 호텔부 안내실에서 서비스 및 운영지원 업무를 담당했습니다.<br>
+&nbsp;&nbsp;- 여객들의 불만 처리 및 안내방송, 편의를 위한 객실점검 및 수리<br>
+&nbsp;&nbsp;- 탑승권 확인 및 객실 안내<br>
+&nbsp;&nbsp;- 선내 영업에 필요한 자재, 물품 등 청구 및 관리<br>
+&nbsp;&nbsp;- 일본, 러시아에서 직접 구매 및 선적 후 영수증 문서처리, 재고관리<br>
+&nbsp;&nbsp;- 선박 운항에 필요한 입, 출항 서류 준비<br>
+&nbsp;&nbsp;- 선원 필요 서류 업데이트 및 관리<br>
+            </p>
+         </div>
+         <div class="workType">
+            <h4>골든브릿지 크루즈</h4>
+            <p>
+               대리
+               <br>
+               2018.09 ~ 2018.12
+            </p>
+         </div>
+         <div class="text">
+            <p>
+               해외 항구 입,출항 시 필요 서류 준비 & 날짜 조정 관리<br>
+               &nbsp;&nbsp;- 크루즈 예약 고객 일정 관리 및 문서작업<br>
+               &nbsp;&nbsp;- 선내에 필요물품 청구 및 관리<br>
+               &nbsp;&nbsp;- 사무용품 관리
+            </p>
+         </div>
+         <div class="workType">
+            <h4>맥도날드</h4>
+            <p>
+               trainer
+               <br>
+               2014.02 ~ 2016.01
+            </p>
+         </div>
+         <div class="text">
+            <p>
+               - 고객 관리<br>
+               - 신입 크루 교육 <br>
+               - 매니저 교육 수료
+            </p>
+         </div>
+      </div><!--work-->
+
+   </div><!--projectPage-->
+
+  
+</body>
+</html>
