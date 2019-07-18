@@ -382,7 +382,23 @@
       </div><!--work-->
 
    </div><!--projectPage-->
-
+   <script>
+      $(window).ready(function(){
+         $("#menuBar,#resumePage").css("opacity",0)
+         $("#resume").hide().fadeIn(1000,function(){
+   
+            $("#menuBar").css("opacity",1)
+            $("#menuBar").hide().fadeIn(1000,function(){
+   
+               $("#resumePage").css("opacity",1)
+               $("#resumePage").hide().fadeIn(1000,function(){
+                  
+               });
+            });
+         });
+            
+      });
+   </script>
   
 </body>
 </html>
