@@ -182,12 +182,22 @@
       </div><!-- projectPage -->
    </div><!--totalSite-->
 
-
-   <style></style>
    <script>
-      function test(){
-         alert("test");
-      }
+      $(window).ready(function(){
+         $("#menuBar,#projectPage").css("opacity",0)
+         $("#project").hide().fadeIn(1000,function(){
+      
+         $("#menuBar").css("opacity",1)
+         $("#menuBar").hide().fadeIn(1000,function(){
+      
+            $("#projectPage").css("opacity",1)
+            $("#projectPage").hide().fadeIn(1000,function(){
+            });
+         });
+      });
+      
+               
+      });
    </script>
 </body>
 </html>
