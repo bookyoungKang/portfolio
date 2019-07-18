@@ -252,15 +252,21 @@
    </div>
 
 
-
-
-
-
-  
-
-
-
-
+   <script>
+      $(window).ready(function(){
+         $("#menuBar,#contectPage").css("opacity",0)
+         $("#contect").hide().fadeIn(1000,function(){
+      
+            $("#menuBar").css("opacity",1)
+            $("#menuBar").hide().fadeIn(1000,function(){
+      
+               $("#contectPage").css("opacity",1)
+               $("#contectPage").hide().fadeIn(1000,function(){
+               });
+            });
+         });
+      });
+   </script>
 
 
 </body>
