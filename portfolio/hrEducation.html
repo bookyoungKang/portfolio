@@ -328,6 +328,24 @@
 
 
    <script>
+      
+    <script>
+      $(window).ready(function(){
+         $("#menuBar,#educationPage").css("opacity",0)
+         $("#education").hide().fadeIn(700,function(){
+      
+            $("#menuBar").css("opacity",1)
+            $("#menuBar").hide().fadeIn(700,function(){
+      
+               $("#educationPage").css("opacity",1)
+               $("#educationPage").hide().fadeIn(700,function(){
+               });
+            });
+         });
+      });
+      
+      
+      
       $("#btn").on("mouseover",function(){
          $(this).css("box-shadow","2px 2px 2px grey");
       });
