@@ -144,7 +144,7 @@
 <body>
    
    <div id="totalSite">
-      <h1 id="project"><img src="../portfolio/pjImages/title.png"></h1>
+      <h1 id="project"><img src="../pjImages/title.png"></h1>
          <div id="menuBar"> <!--메뉴 바-->
             <button type="button" id="menu1" class="menu"><a href="hrProfile.html">PROFILE</a>
             <i class="fas fa-list"></i></button>
@@ -166,22 +166,24 @@
       <div class="works">Works</div>
          <div id="projects">
             <div id="github">
-               <img src="../portfolio/pjImages/github.png"">
+               <img src="../pjImages/github.png"">
                <button type="button"  class="pj" id="btn1"title="github 소스입니다."><a href="https://github.com/bookyoungKang/project01"target="_blank">Project01</a></button>
                <button type="button"  class="pj" id="btn2"title="github 소스입니다."><a href="https://github.com/bookyoungKang/project02"target="_blank">Project02</a></button>
-               <button type="button"  class="pj" id="btn3"title="github 소스입니다.">Project03</button>
+               <button type="button"  class="pj" id="btn3"title="github 소스입니다."><a href="https://github.com/bookyoungKang/webProject"target="_blank">Project03</a></button>
                <button type="button"  class="pj" id="btn4"title="github 소스입니다.">Project04</button>
             </div>
             <div id="pjLink">
-               <div class="pjs" id="pj1" onclick="location.href='pj1.html';"><img src="../portfolio/pjImages/sauna.jpg"><span style="padding-left: 5px;">사우나 프로그램</span></div>
-               <div class="pjs" id="pj2" onclick="location.href='pj2.html';"><img src="../portfolio/pjImages/education.jpg"><span style="padding-left: 10px;">교육센터 운영</span></div>
-               <div class="pjs" id="pj3"><img src="../portfolio/pjImages/준비중.png"><span style="padding-left: 30px;">준비중...</span></div>
-               <div class="pjs" id="pj4"><img src="../portfolio/pjImages/준비중.png"><span style="padding-left: 30px;">준비중...</span></div>
+               <div class="pjs" id="pj1" onclick="location.href='pj1.html';"><img src="../pjImages/sauna.jpg"><span style="padding-left: 5px;">사우나 프로그램</span></div>
+               <div class="pjs" id="pj2" onclick="location.href='pj2.html';"><img src="../pjImages/education.jpg"><span style="padding-left: 10px;">교육센터 운영</span></div>
+               <div class="pjs" id="pj3" onclick="location.href='pj3.html';"><img src="../pjImages/메인.png"><span tyle="padding-left: -15px;">웹개발 수료생 포털사이트</span></div>
+               <div class="pjs" id="pj4"><img src="../pjImages/준비중.png"><span style="padding-left: 30px;">준비중...</span></div>
             </div>
          </div><!--project-->
       </div><!-- projectPage -->
    </div><!--totalSite-->
 
+
+ 
    <script>
       $(window).ready(function(){
          $("#menuBar,#projectPage").css("opacity",0)
@@ -199,5 +201,6 @@
                
       });
    </script>
+   
 </body>
 </html>

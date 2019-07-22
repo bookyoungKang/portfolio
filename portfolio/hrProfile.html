@@ -141,7 +141,7 @@
 <body>
 
    <div id="totalSite">
-      <h1 id="profile"><img src="../portfolio/pjImages/title.png"></h1>
+      <h1 id="profile"><img src="../pjImages/title.png"></h1>
       <div id="menuBar"> <!--메뉴 바-->
          <!-- <a href="#" class="menu" id="menu1">PROFILE</a>
          <a href="#" class="menu" id="menu2">RESUME</a>
@@ -183,11 +183,11 @@
          <!-- <textarea class="helloWorld" style="font-size: 3em;">
                Hello World!
          </textarea>   -->
-         <!-- <img src = "../portfolio/pjImages/github.png" class="github"> -->
+         <!-- <img src = "../pjImages/github.png" class="github"> -->
   
          
          <div class="about">
-            <div class="picture"><img src="../portfolio/pjImages/bookyoung.jpg"></div>
+            <div class="picture"><img src="../pjImages/bookyoung.jpg"></div>
          <p class="project">
             <h1 style="font-size: 2em; text-align: left; color:#636363;">About Me</h1>
             <span style="font-size: 13px;">안녕하십니까. 주니어 웹 개발자 강부경입니다. <br><br>
@@ -218,28 +218,28 @@
                <b>Address : </b>"23, Eunhaengyeongsajeong-ro 23beon-gil, Gochon-eup, Gimpo-si, Gyeonggi-do, Republic of Korea"
                <br>
             </p>
-         </div>        
-      </div><!--firstPage-->
+         </div>
+    </div><!--firstPage-->
    </div> <!-- totalSite-->
-
-      <script>
+   
+   <script>
 
       $(window).ready(function(){
          $("#menuBar,#firstPage").css("opacity",0)
-         $("#profile").hide().fadeIn(1000,function(){
+          $("#profile").hide().fadeIn(1000,function(){
    
             $("#menuBar").css("opacity",1)
             $("#menuBar").hide().fadeIn(1000,function(){
    
                $("#firstPage").css("opacity",1)
                $("#firstPage").hide().fadeIn(1000,function(){               
+           });
           });
-         });
-      });
-           
-   });
+       });
+    });
    
    </script>
    
+
 </body>
 </html>
